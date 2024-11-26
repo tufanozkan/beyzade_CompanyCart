@@ -17,8 +17,8 @@ const CommunicatePage = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#ffe6a7", // Light Cream background
-        minHeight: "80vh",
+        backgroundColor: "#fffff", // krem
+        minHeight: "84vh",
         maxHeight: "auto",
       }}
     >
@@ -27,10 +27,11 @@ const CommunicatePage = () => {
         sx={{
           marginTop: 5,
           alignSelf: "center",
-          color: "#252618", // Dark Green/Black for the title text
+          color: "#252618", // Header'daki ile aynı renk tonu
           fontSize: { xs: "1.5rem", md: "2rem" },
           fontFamily: "'Poppins', sans-serif",
           letterSpacing: 1.5,
+          fontWeight: 500,
           textTransform: "uppercase",
           textShadow: "1px 1px 2px rgba(0, 0, 0, 0.3)",
         }}
@@ -58,14 +59,14 @@ const CommunicatePage = () => {
             transition: "opacity 1.5s ease-in-out",
           }}
         >
-          {/* Contact Information Grid */}
+          {/* İletişim Bilgileri Grid */}
           <Grid item xs={12} md={6}>
             <Paper
               elevation={6}
               sx={{
                 padding: { xs: 3, sm: 4 },
                 borderRadius: 2,
-                backgroundColor: "#ffffff", // White Paper background
+                backgroundColor: "#898C3A", // Header'ın koyu kırmızı tonu
                 flexGrow: 1,
               }}
             >
@@ -73,7 +74,7 @@ const CommunicatePage = () => {
                 variant="h6"
                 gutterBottom
                 sx={{
-                  color: "#bb9457", // Beige for the section title
+                  color: "#252618", // Header'daki açık krem tonu
                   fontSize: { xs: "1.2rem", md: "1.5rem" },
                   fontFamily: "'Poppins', sans-serif",
                   letterSpacing: 1,
@@ -85,19 +86,19 @@ const CommunicatePage = () => {
 
               {[
                 {
-                  icon: <LocationOn sx={{ mr: 1, color: "#6f1d1b" }} />,
+                  icon: <LocationOn sx={{ mr: 1, color: "#ffffff" }} />,
                   text: "Hacıhaliller Mahallesi Şehzadeler/Manisa",
                 },
                 {
-                  icon: <Phone sx={{ mr: 1, color: "#6f1d1b" }} />,
+                  icon: <Phone sx={{ mr: 1, color: "#ffffff" }} />,
                   text: "+90 538 508 17 17",
                 },
                 {
-                  icon: <Email sx={{ mr: 1, color: "#6f1d1b" }} />,
+                  icon: <Email sx={{ mr: 1, color: "#ffffff" }} />,
                   text: "info@beyzade.com.tr",
                 },
                 {
-                  icon: <Instagram sx={{ mr: 1, color: "#6f1d1b" }} />,
+                  icon: <Instagram sx={{ mr: 1, color: "#ffffff" }} />,
                   text: "@avci_tarim_hayvancilik45",
                 },
               ].map((contact, index) => (
@@ -107,7 +108,7 @@ const CommunicatePage = () => {
                     display: "flex",
                     alignItems: "center",
                     marginBottom: 2,
-                    backgroundColor: "#ffffff", // White background for contact info
+                    backgroundColor: "#252618", // Koyu arka plan898C3A
                     borderRadius: 1,
                     padding: 2,
                     boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
@@ -117,7 +118,7 @@ const CommunicatePage = () => {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: "#252618", // Dark Green/Black text
+                      color: "#ffffff", // Açık krem metin252618
                       fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
@@ -128,13 +129,14 @@ const CommunicatePage = () => {
             </Paper>
           </Grid>
 
-          {/* Map Section */}
+          {/* Harita Bölümü */}
           <Grid item xs={12} md={6}>
             <Paper
               elevation={6}
               sx={{
                 padding: { xs: 3, sm: 4 },
                 borderRadius: 2,
+                backgroundColor: "#898C3A", // Header koyu kırmızı tonu
                 flexGrow: 1,
               }}
             >
@@ -142,7 +144,7 @@ const CommunicatePage = () => {
                 variant="h6"
                 gutterBottom
                 sx={{
-                  color: "#bb9457", // Beige for the section title
+                  color: "#252618", // Açık krem tonu
                   fontSize: { xs: "1.2rem", md: "1.5rem" },
                   fontFamily: "'Poppins', sans-serif",
                   letterSpacing: 1,

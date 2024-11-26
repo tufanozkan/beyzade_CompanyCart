@@ -29,7 +29,14 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ margin: 0, backgroundColor: "#252618" }}>
+    <AppBar
+      position="static"
+      sx={{
+        borderBottom: "2px solid #898C3A",
+        margin: 0,
+        backgroundColor: "#252618",
+      }}
+    >
       {/* House-in-Forest-2 (Dark Green) */}
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Box
@@ -59,7 +66,26 @@ const Header = () => {
 
         {/* Desktop Menu, only shown on screens wider than 900px */}
         {!isTabletOrMobile && (
-          <div className="desktop-menu">
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            {/* Cart Icon for Desktop */}
+            <IconButton
+              edge="end"
+              color="inherit"
+              component={Link}
+              to="/cart"
+              aria-label="cart"
+            >
+              <img
+                src={cartIcon}
+                alt="Cart Icon"
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  filter:
+                    "invert(40%) sepia(20%) saturate(400%) hue-rotate(40deg)",
+                }}
+              />
+            </IconButton>
             <Button
               component={Link}
               to="/"
@@ -101,19 +127,6 @@ const Header = () => {
             </Button>
             <Button
               component={Link}
-              to="/cart"
-              color="inherit"
-              sx={{
-                "&:hover": { backgroundColor: "#bb9457" },
-                fontFamily: "Poppins, sans-serif",
-                fontWeight: "600",
-                textTransform: "uppercase",
-              }}
-            >
-              SEPETİM
-            </Button>
-            <Button
-              component={Link}
               to="/communicate"
               color="inherit"
               sx={{
@@ -125,15 +138,16 @@ const Header = () => {
             >
               İLETİŞİM
             </Button>
-          </div>
+          </Box>
         )}
 
+        {/* Mobile/Tablet Menu */}
         {isTabletOrMobile && (
           <Box
             sx={{
               textAlign: "center",
               display: "flex",
-              alignItems: "space-between",
+              alignItems: "center",
               gap: 1,
             }}
           >
@@ -154,6 +168,7 @@ const Header = () => {
                 }}
               />
             </IconButton>
+            {/* Cart Icon for Mobile */}
             <IconButton
               edge="end"
               color="inherit"
@@ -175,7 +190,7 @@ const Header = () => {
           </Box>
         )}
 
-        {/* Mobile/Tablet Menu */}
+        {/* Mobile Menu Items */}
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}

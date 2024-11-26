@@ -39,13 +39,12 @@ const Footer = () => {
       <Typography
         variant="body1"
         sx={{
-          marginLeft: 5,
           fontFamily: "'Raleway', sans-serif",
           fontWeight: "500",
           marginBottom: 1,
         }}
       >
-        &copy; 2024 Beyzade Et ve Süt Ürünleri. Tüm hakları saklıdır.
+        &copy; 2024 Beyzade Et ve Süt Ürünleri <br /> Tüm hakları saklıdır.
       </Typography>
 
       {/* Footer Content Section */}

@@ -24,7 +24,7 @@ const AboutPage = () => {
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        minHeight: "80vh",
+        minHeight: "84vh",
         maxHeight: "auto",
         color: "#fff",
         position: "relative",
@@ -38,7 +38,7 @@ const AboutPage = () => {
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: "rgba(137, 140, 58, 0.8)",
-            margin: { xs: 3, md: 8 },
+            margin: { xs: 3, md: 24, lg: 12 },
             padding: { xs: 3, md: 5 },
             borderRadius: 2,
             animation: `${slideDown} 1s ease-in-out`,
@@ -73,15 +73,14 @@ const AboutPage = () => {
             Çiftliğimiz, inek hayvancılığı ve besicilik konusunda uzun yıllara
             dayanan deneyime sahip, modern tarım yöntemlerini benimseyen bir
             işletmedir. Her bir inek, sağlıklı ve verimli bir üretim için
-            titizlikle bakılmakta, doğal yemlerle beslenerek en kaliteli süt ve
-            etin elde edilmesi sağlanmaktadır. Hayvancılığın her aşamasında,
-            hayvanlarımızın sağlığını ve refahını ön planda tutarak, etik ve
-            çevre dostu yöntemlerle üretim yapıyoruz. İneklerimiz, geniş
-            meralarda doğal koşullarda yetişmekte, organik yemlerle beslenerek
-            en taze ve en sağlıklı ürünleri sunmamıza olanak tanımaktadır.
-            Ürettiğimiz süt ve et, tamamen doğaldır ve katkı maddesi içermez.
-            Ürünlerimiz, hem lezzetiyle hem de kalitesiyle kendini
-            kanıtlamaktadır.
+            titizlikle bakılmakta, en kaliteli süt ve etin elde edilmesi
+            sağlanmaktadır. Hayvancılığın her aşamasında, hayvanlarımızın
+            sağlığını ve refahını ön planda tutarak, etik ve çevre dostu
+            yöntemlerle üretim yapıyoruz. İneklerimiz, geniş meralarda doğal
+            koşullarda yetişmekte, organik yemlerle beslenerek en taze ve en
+            sağlıklı ürünleri sunmamıza olanak tanımaktadır. Ürettiğimiz süt ve
+            et, tamamen doğaldır ve katkı maddesi içermez. Ürünlerimiz, hem
+            lezzetiyle hem de kalitesiyle kendini kanıtlamaktadır.
           </Typography>
 
           <Typography

@@ -2,27 +2,26 @@ import React from "react";
 import { Container, Typography, Button, Grid, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/system";
-import image from "../assets/toasts/et.png";
-import sandwichIcon from "../assets/icons/sandwich.svg";
-import truckIcon from "../assets/icons/truck.svg";
-import tableIcon from "../assets/icons/table.svg";
-import walletIcon from "../assets/icons/wallet.svg";
+import image from "../assets/products/sut.png";
+import farm from "../assets/icons/farm.svg";
+import cow from "../assets/icons/cow.svg";
+import milk from "../assets/icons/milk.svg";
+import grain from "../assets/icons/grain.svg";
 
 const HeroSection = styled(Box)(({ theme }) => ({
   position: "relative",
-  backgroundColor: "#6F1D1B",
+  backgroundColor: "#252618", // Header arka plan rengi
   marginTop: 0,
   height: "65vh",
   display: "flex",
   alignItems: "center",
-  justifyContent: "center", // Center both vertically and horizontally
-  alignSelf: "center",
+  justifyContent: "center",
   textAlign: "center",
   padding: theme.spacing(4),
   overflow: "hidden",
-  flexDirection: "column", // Mobile ve tablet için sütun düzeni
+  flexDirection: "column",
   "@media (min-width:900px)": {
-    flexDirection: "row", // Daha büyük ekranlar için satır düzeni
+    flexDirection: "row",
   },
   "& h1, & button": {
     position: "relative",
@@ -31,7 +30,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
     animation: "slideIn 2.1s ease-out forwards",
   },
   "& h1": {
-    color: "#fff",
+    color: "#898C3A", // Açık Zeytin
     fontFamily: "Poppins, sans-serif",
     fontWeight: "600",
     letterSpacing: "0.1em",
@@ -51,12 +50,11 @@ const HeroSection = styled(Box)(({ theme }) => ({
   },
 }));
 
-// Styled component for the background image
 const HeroImage = styled(Box)(({ theme }) => ({
   position: "relative",
   width: "100%",
   height: "100%",
-  border: "2px solid #ffe6a7",
+  border: "2px solid #BB9457", // Hover'daki Bej Renk
   borderRadius: "12px",
   backgroundImage: `url(${image})`,
   backgroundSize: "cover",
@@ -64,7 +62,7 @@ const HeroImage = styled(Box)(({ theme }) => ({
   zIndex: 0,
   animation: "slideInImage 2.1s ease-out forwards",
   opacity: 0,
-  margin: theme.spacing(2), // Kenarlarda boşluk ekledik
+  margin: theme.spacing(2),
   "@keyframes slideInImage": {
     from: {
       transform: "translateX(100%)",
@@ -81,7 +79,7 @@ const FeatureItem = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
-  backgroundColor: "#bb9457",
+  backgroundColor: "#898C3A", // Açık Zeytin
   borderRadius: "8px",
   padding: theme.spacing(3),
   margin: theme.spacing(1),
@@ -90,7 +88,7 @@ const FeatureItem = styled(Box)(({ theme }) => ({
   textAlign: "center",
   "&:hover": {
     transform: "scale(1.05)",
-    backgroundColor: "#a88b4d",
+    backgroundColor: "#BB9457", // Bej Hover
   },
 }));
 
@@ -111,13 +109,12 @@ const HomePage = () => {
             mb: { xs: 3, md: 3 },
             width: { xs: "100%", sm: "100%", md: "50%" },
             maxWidth: "500px",
-            display: "flex", // Use flex for centering
-            flexDirection: "column", // Align content in column
-            alignItems: "center", // Center items horizontally
-            justifyContent: "center", // Center items vertically
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          {/* Content on the left */}
           <Typography
             variant="h2"
             component="h1"
@@ -127,55 +124,30 @@ const HomePage = () => {
                 sm: "1.8rem",
                 md: "2.2rem",
                 lg: "3rem",
-              }, // Adjusted sizes for responsiveness
-              textAlign: "center", // Centered text for better aesthetics
+              },
+              textAlign: "center",
             }}
           >
-            Taze malzemelerle hazırlanan benzersiz lezzet
+            Doğadan Sofranıza Tazelik ve Lezzetin Buluştuğu Nokta!
           </Typography>
           <Button
             variant="contained"
             component={Link}
             to="/products"
             sx={{
-              cursor: "pointer",
               padding: "10px 24px",
-              fontSize: { xs: "16px", sm: "18px" }, // Adjusted font size for button
-              color: "#6f1d1b",
-              border: "3px solid #ffe6a7",
+              fontSize: { xs: "16px", sm: "18px" },
+              color: "#252618", // Koyu Yeşil (Header Arka Plan)
+              border: "3px solid #BB9457", // Bej Sınır
               borderRadius: "34px",
-              backgroundColor: "#ffe6a7",
+              backgroundColor: "#BB9457", // Bej
               fontWeight: 600,
               fontFamily: "Poppins, sans-serif",
-              transition: "all 0.3s cubic-bezier(0.23, 1, 0.32, 1)",
-              overflow: "hidden",
-              position: "relative",
-              zIndex: 2,
-              opacity: 0,
-              animation: "slideIn 2.1s ease-out forwards",
-              "&::before": {
-                content: '""',
-                position: "absolute",
-                inset: 0,
-                margin: "auto",
-                width: "50px",
-                height: "50px",
-                borderRadius: "inherit",
-                scale: 0,
-                zIndex: -1,
-                backgroundColor: "#6f1d1b",
-                transition: "all 0.6s cubic-bezier(0.23, 1, 0.32, 1)",
-              },
-              "&:hover::before": {
-                scale: 3,
-              },
+              transition: "all 0.9s cubic-bezier(0.23, 1, 0.32, 1)",
               "&:hover": {
-                color: "#ffe6a7",
-                transform: "scale(1.1)",
-                boxShadow: "0 0px 20px #6f1d1b",
-              },
-              "&:active": {
-                transform: "scale(1)",
+                color: "#BB9457",
+                backgroundColor: "#252618",
+                boxShadow: "0 0px 20px #BB9457",
               },
             }}
           >
@@ -194,8 +166,7 @@ const HomePage = () => {
             fontFamily: "Poppins, sans-serif",
             fontWeight: "600",
             letterSpacing: "0.05em",
-            color: "#6f1d1b",
-            cursor: "default",
+            color: "#898C3A", // Açık Zeytin
           }}
         >
           Nasıl Üretiyoruz?
@@ -203,28 +174,28 @@ const HomePage = () => {
         <Grid container justifyContent="center" spacing={2}>
           {[
             {
-              icon: sandwichIcon,
-              title: "Özenle Seçilmiş Malzemeler",
+              icon: grain,
+              title: "Doğal Beslenme, Sağlıklı Hayvanlar",
               description:
-                "Tüm ürünlerimiz, yüksek kaliteli ve lezzetli doğal malzemelerle özenle üretilmiştir. Sağlıklı ve lezzetli seçenekleri sizlere sunmaktan büyük mutluluk duyuyoruz.",
+                "Besi çiftliğimiz, doğanın sunduğu en taze ve kaliteli kaynaklardan faydalanarak hayvanlarımızı besler. Her bir canlı, sağlıklı ve doğal yemlerle beslenir, bu sayede et ve süt ürünlerimizin lezzeti ve kalitesi en üst düzeye çıkar.",
             },
             {
-              icon: walletIcon,
-              title: "Güvenli Ödeme",
+              icon: cow,
+              title: "Bilinçli Yetiştiricilik ve Etik Üretim",
               description:
-                "Ürünlerimizin satın alımlarında güvenliğiniz bizim için en öncelikli konudur. Tüm ödeme işlemleriniz, 256 bit SSL şifreleme ile korunmaktadır.",
+                "Hayvanların refahını ön planda tutarak, onların doğasına uygun bir şekilde yetiştirilmesi için tüm etik standartlara uygun şekilde çalışırız. Ayrıca, üretim sürecimizin her aşamasında hijyen ve kalite kontrolü sağlanır.",
             },
             {
-              icon: truckIcon,
-              title: "Kaliteyi Sizlere Getirir",
+              icon: milk,
+              title: "Taze ve Güvenilir Ürünler",
               description:
-                "Ürünlerimizin tazeliğini korumak için en gelişmiş soğuk zincir teknolojisi ile en ideal koşullarda sizlere ulaştırıyoruz.",
+                "Üretim süreçlerimizde her zaman yüksek kaliteyi hedeflerken, ürünlerimizin tazeliğini ve doğal içeriğini korumak için dikkatli ve titiz bir şekilde çalışırız. Çiftliğimizde üretilen her et ve süt ürünü, sizlere sağlıklı ve güvenilir bir şekilde ulaşır.",
             },
             {
-              icon: tableIcon,
-              title: "Profesyonel Mutfak Kalitesi",
+              icon: farm,
+              title: "Hayvanlarımızın Doğal Yaşam Alanları",
               description:
-                "Ürünlerimiz, profesyonel mutfak standartlarında üretilir ve en yüksek kaliteyi evinize getirir.",
+                "Çiftliğimizde hayvanlarımızın huzurlu bir ortamda büyümesi için gerekli tüm şartlar sağlanır. Onların sağlıklı bir şekilde gelişmesini sağlayarak, üretim sürecinin her aşamasında doğallığı ve verimliliği ön planda tutarız.",
             },
           ].map((feature, index) => (
             <Grid item xs={12} md={6} key={index}>
@@ -233,9 +204,9 @@ const HomePage = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    cursor: "default",
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: "700",
+                    marginBottom: 1,
                   }}
                 >
                   {feature.title}
@@ -245,8 +216,6 @@ const HomePage = () => {
                     fontFamily: "'Poppins', sans-serif",
                     fontSize: "1rem",
                     textAlign: "center",
-                    cursor: "default",
-                    marginTop: 1,
                   }}
                 >
                   {feature.description}

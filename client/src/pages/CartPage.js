@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom"; // Link import edilmesi gerekiyor
 import axios from "axios";
 import { CartContext } from "../components/CartContext";
 import {
@@ -77,24 +78,93 @@ const CartPage = () => {
   };
 
   return (
-    <Container maxWidth="lg">
+    <Container
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "84vh",
+        maxHeight: "auto",
+      }}
+      maxWidth="lg"
+    >
       <Box sx={{ marginY: 4 }}>
         <Typography
           variant="h4"
           align="center"
           gutterBottom
-          sx={{ color: "#026646", fontWeight: "600" }}
+          sx={{
+            fontSize: { xs: "1.5rem", md: "2rem" },
+            fontFamily: "'Poppins', sans-serif",
+            color: "#026646",
+            fontWeight: "600",
+          }}
         >
           Sepetim
         </Typography>
         {cartItems.length === 0 ? (
-          <Typography variant="h6" align="center" sx={{ color: "#000000" }}>
-            Sepetiniz boş.
-          </Typography>
+          <Box
+            sx={{
+              textAlign: "center",
+              padding: "40px 20px",
+              backgroundColor: "#f9f9f9",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+            }}
+          >
+            <Typography
+              variant="h5"
+              sx={{
+                color: "#026646",
+                fontWeight: "600",
+                marginBottom: 3,
+                fontSize: "1.5rem",
+                fontFamily: "'Poppins', sans-serif",
+                letterSpacing: "0.5px",
+                textTransform: "uppercase",
+                lineHeight: 1.4,
+              }}
+            >
+              Sepetiniz Boş
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                color: "#333",
+                fontWeight: "400",
+                marginBottom: 3,
+                fontSize: "1rem",
+                lineHeight: 1.6,
+              }}
+            >
+              Hemen ürünlerimize göz atın ve sepetinizi doldurun!
+            </Typography>
+            <Link to="/products">
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#026646",
+                  borderRadius: "50px",
+                  padding: "12px 36px",
+                  textTransform: "none",
+                  fontWeight: 600,
+                  fontSize: "1.1rem",
+                  fontFamily: "'Poppins', sans-serif",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+                  "&:hover": {
+                    backgroundColor: "#014B34",
+                    transform: "scale(1.05)",
+                    boxShadow: "0 6px 16px rgba(0, 0, 0, 0.2)",
+                  },
+                }}
+              >
+                Keşfet
+              </Button>
+            </Link>
+          </Box>
         ) : (
           <Grid container spacing={2}>
             {cartItems.map((item) => (
-              <Grid item xs={12} sm={6} md={4} key={item.id}>
+              <Grid item xs={12} sm={6} md={5} lg={3} key={item.id}>
                 <Card
                   sx={{
                     borderRadius: "12px",
@@ -107,6 +177,7 @@ const CartPage = () => {
                 >
                   <CardContent
                     sx={{
+                      fontFamily: "'Poppins', sans-serif",
                       padding: "16px",
                       display: "flex",
                       flexDirection: "column",
@@ -279,7 +350,6 @@ const CartPage = () => {
               placeholder="Adres"
               variant="outlined"
               fullWidth
-              multiline
               name="address"
               value={shippingInfo.address}
               onChange={handleInputChange}
@@ -294,18 +364,21 @@ const CartPage = () => {
             />
           </Grid>
         </Grid>
-        <Box sx={{ marginTop: 3, textAlign: "center" }}>
+        <Box sx={{ marginTop: 3 }}>
           <Button
-            onClick={handlePlaceOrder}
             variant="contained"
+            color="primary"
+            fullWidth
+            onClick={handlePlaceOrder}
             sx={{
-              borderRadius: "24px",
-              padding: "10px 30px",
-              textTransform: "none",
               backgroundColor: "#026646",
+              borderRadius: "8px",
+              padding: "12px 0",
+              textTransform: "none",
               fontWeight: 600,
-              fontSize: "1rem",
-              "&:hover": { backgroundColor: "#014B34" },
+              "&:hover": {
+                backgroundColor: "#014B34",
+              },
             }}
           >
             Siparişi Tamamla

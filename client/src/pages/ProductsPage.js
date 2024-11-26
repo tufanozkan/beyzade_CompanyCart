@@ -11,20 +11,21 @@ import {
   CardContent,
   Menu,
   MenuItem,
+  Box,
   Button,
 } from "@mui/material";
 import { CartContext } from "../components/CartContext";
 import { styled } from "@mui/system";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import ShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import sut from "../assets/toasts/sut.png";
-import et from "../assets/toasts/et.png";
-import kasar from "../assets/toasts/kasar.png";
-import sucuk from "../assets/toasts/sucuk.png";
-import tulum from "../assets/toasts/tulum.png";
-import kiyma from "../assets/toasts/kıyma.png";
-import tereyag from "../assets/toasts/tereyag.png";
-import sosis from "../assets/toasts/sosis.png";
+import sut from "../assets/products/sut.png";
+import et from "../assets/products/et.png";
+import kasar from "../assets/products/kasar.png";
+import sucuk from "../assets/products/sucuk.png";
+import tulum from "../assets/products/tulum.png";
+import kiyma from "../assets/products/kıyma.png";
+import tereyag from "../assets/products/tereyag.png";
+import sosis from "../assets/products/sosis.png";
 
 // Card styles
 const ProductCard = styled(Card)(({ theme }) => ({
@@ -85,7 +86,6 @@ const AddToCartButton = styled(IconButton)(({ theme }) => ({
   padding: theme.spacing(1),
   color: "#FFF",
   display: "flex",
-  alignItems: "center",
   justifyContent: "center",
   "&:hover": {
     backgroundColor: "#8F3727", // Hover color
@@ -261,15 +261,20 @@ const ProductsPage = () => {
                       +
                     </CounterButton>
                   </CounterContainer>
-                  <AddToCartButton
-                    onClick={() => handleAddToCart(product)}
-                    sx={{ marginLeft: 6.4, marginTop: 2 }}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      marginTop: 2, // Add spacing if necessary
+                    }}
                   >
-                    <Typography color="#FFF" sx={{ marginRight: 1 }}>
-                      Sepete Ekle
-                    </Typography>
-                    <ShoppingCartIcon fontSize="medium" />
-                  </AddToCartButton>
+                    <AddToCartButton onClick={() => handleAddToCart(product)}>
+                      <Typography color="#FFF" sx={{ marginRight: 1 }}>
+                        Sepete Ekle
+                      </Typography>
+                      <ShoppingCartIcon fontSize="medium" />
+                    </AddToCartButton>
+                  </Box>
                 </CardContent>
               </ProductCard>
             </Grid>
