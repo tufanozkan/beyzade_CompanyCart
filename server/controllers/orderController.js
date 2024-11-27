@@ -11,9 +11,9 @@ exports.placeOrder = (req, res) => {
     - Ürünler: ${cartItems
       .map((item) => `${item.name} (${item.quantity})`)
       .join(", ")}
-    - Kargo Bilgileri: ${shippingInfo.firstName} ${shippingInfo.lastName}, ${
+    - Kargo Bilgileri: ${shippingInfo.firstName} ${shippingInfo.lastName}/ ${
     shippingInfo.phone
-  }, ${shippingInfo.address}
+  }/ ${shippingInfo.address}
   `;
 
   // Mesaj gönder
