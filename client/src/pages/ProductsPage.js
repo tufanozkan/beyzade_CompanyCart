@@ -20,7 +20,7 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 import ShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import sut from "../assets/products/sut.png";
 import et from "../assets/products/et.png";
-import kasar from "../assets/products/kasar.png";
+import kasar from "../assets/products/yumurta.png";
 import sucuk from "../assets/products/sucuk.png";
 import tulum from "../assets/products/tulum.png";
 import kiyma from "../assets/products/kıyma.png";
@@ -93,55 +93,55 @@ const AddToCartButton = styled(IconButton)(({ theme }) => ({
 }));
 
 const allProducts = [
-  { id: 1, name: "1 L Süt", image: sut, category: "sut", price: 29.9 },
+  { id: 1, name: "5L Süt", image: sut, category: "sut", price: 124.9 },
   {
     id: 2,
     name: "Dana Eti (500 gram)",
     image: et,
     category: "et",
-    price: 399.9,
+    price: 249.9,
   },
   {
     id: 3,
-    name: "Kaşar Peyniri (500 gram)",
+    name: "30'lu Yumurta",
     image: kasar,
     category: "sut",
-    price: 199.9,
+    price: 179.9,
   },
   {
     id: 4,
-    name: "Halka Sucuk (200 gram)",
+    name: "Dana Sucuk (1000 gram)",
     image: sucuk,
     category: "et",
-    price: 184.9,
+    price: 599.9,
   },
   {
     id: 5,
-    name: "Tulum Peyniri (200 gram)",
+    name: "İlikli Kemik Suyu (660cc)",
     image: tulum,
     category: "sut",
-    price: 139.9,
+    price: 349.9,
   },
   {
     id: 6,
     name: "Dana Kıyma (500 gram)",
     image: kiyma,
     category: "et",
-    price: 349.9,
+    price: 249.9,
   },
   {
     id: 7,
-    name: "Tereyağ (300 gram)",
+    name: "Tereyağ (500 gram)",
     image: tereyag,
     category: "sut",
-    price: 359.9,
+    price: 329.9,
   },
   {
     id: 8,
-    name: "Paket Sosis",
+    name: "Dana Sosis (1000 gram)",
     image: sosis,
     category: "et",
-    price: 129.9,
+    price: 649.9,
   },
 ];
 

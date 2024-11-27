@@ -21,7 +21,7 @@ exports.placeOrder = (req, res) => {
     .create({
       body: orderDetails,
       from: "whatsapp:+14155238886", // Twilio WhatsApp numarası
-      to: "whatsapp:+905078958517", // Alıcı numarası
+      to: "whatsapp:+905385081717", // Alıcı numarası
     })
     .then((message) => {
       console.log(`Message sent: ${message.sid}`);
