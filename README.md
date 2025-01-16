@@ -10,14 +10,12 @@ A modern, scalable web application built with **React** and **Node.js** to strea
 - **Interactive Shopping Cart**  
   Add, remove, and manage items effortlessly in the cart with real-time updates.
 
-- **Streamlined Checkout**  
-  Complete your orders in just a few clicks with a secure and efficient ordering process.
-
 - **Automated Notifications**  
   Order details are sent to the backend and dispatched as messages using cutting-edge notification technologies.
 
 - **Informative Pages**  
-  - **Home**: Discover the platform's highlights and promotions.  
+  - **Home**: Discover the platform's highlights and promotions.
+  - **Products**: Browse a curated list of available products with detailed descriptions and pricing.    
   - **About Us**: Learn more about the team and mission behind the platform.  
   - **Contact**: Reach out to us directly using the integrated contact form.
 
